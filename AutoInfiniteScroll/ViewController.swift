@@ -3,7 +3,7 @@
 //  AutoInfiniteScroll
 //
 //  Created by Andrew Murdoch on 4/26/16.
-//  Copyright © 2016 Andrew Murdoch. All rights reserved.
+//  Copyright © 2016 RAM4LLC. All rights reserved.
 //
 
 import UIKit
