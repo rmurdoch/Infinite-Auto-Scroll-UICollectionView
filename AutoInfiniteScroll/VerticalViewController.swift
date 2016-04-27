@@ -21,9 +21,9 @@ class VerticalViewController: UIViewController, UICollectionViewDataSource, UICo
         self.startTimer()
     }
     
-    // -------------------------------------------------------------------------------
-    //	UICollectionView DataSource
-    // -------------------------------------------------------------------------------
+// -------------------------------------------------------------------------------
+//	UICollectionView DataSource
+// -------------------------------------------------------------------------------
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return dummyCount * items.count
     }
@@ -40,9 +40,9 @@ class VerticalViewController: UIViewController, UICollectionViewDataSource, UICo
         return cell
     }
     
-    // -------------------------------------------------------------------------------
-    //	UICollectionView Delegate
-    // -------------------------------------------------------------------------------
+// -------------------------------------------------------------------------------
+//	UICollectionView Delegate
+// -------------------------------------------------------------------------------
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
         return collectionView.bounds.size
     }
@@ -54,9 +54,9 @@ class VerticalViewController: UIViewController, UICollectionViewDataSource, UICo
     }
     
     
-    // -------------------------------------------------------------------------------
-    //	Infinite Scroll Controls
-    // -------------------------------------------------------------------------------
+// -------------------------------------------------------------------------------
+//	Infinite Scroll Controls
+// -------------------------------------------------------------------------------
     func scrollViewDidScroll(scrollView: UIScrollView) {
         self.centerIfNeeded()
     }
@@ -67,10 +67,10 @@ class VerticalViewController: UIViewController, UICollectionViewDataSource, UICo
         let height = contentHeight / CGFloat(dummyCount)
         
         if 0 > currentOffset.y {
-            //left scrolling
+            //up scrolling
             collectionView.contentOffset = CGPointMake(currentOffset.x, height - currentOffset.y)
         } else if (currentOffset.y + cellHeight) > contentHeight {
-            //right scrolling
+            //down scrolling
             let difference = (currentOffset.y + cellHeight) - contentHeight
             collectionView.contentOffset = CGPointMake(currentOffset.x, height - (cellHeight + difference))
         }
@@ -84,9 +84,9 @@ class VerticalViewController: UIViewController, UICollectionViewDataSource, UICo
         return CGRectGetHeight(collectionView.frame)
     }
     
-    // -------------------------------------------------------------------------------
-    //	Timer Controls
-    // -------------------------------------------------------------------------------
+// -------------------------------------------------------------------------------
+//	Timer Controls
+// -------------------------------------------------------------------------------
     func startTimer() {
         if items.count > 1 && timer == nil {
             let timeInterval = 5.0;
